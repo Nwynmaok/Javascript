@@ -5,7 +5,11 @@
 <title>Using Conditional Statements</title>
 <link href="../_css/site.css" rel="stylesheet">
 <script>
-
+  var luckyNum = prompt("What is your lucky number?", "");
+  luckyNum = parseInt(luckyNum, 10);
+  while(isNaN(luckyNum)) {
+    luckyNum = prompt("that is not a valid number, try again", "");
+  }
 </script>
 </head>
 
@@ -18,8 +22,16 @@
     <div class="main">
       <h1>Using Conditional Statements</h1>
       <script>
-		
-	  </script> 
+        if(luckyNum == 7) {
+          document.write("<p>7 is my lucky number too!</p>");
+        }
+        else if (luckyNum == 13 || luckyNum == 4) {
+          document.write("<p>Oh no, " + luckyNum + " is not a lucky number</p>");
+        }
+        else {
+          document.write("<p>Your luckynum is " + luckyNum + "</p>");
+        }
+	    </script>
     </div>
   </div>
   <footer>
