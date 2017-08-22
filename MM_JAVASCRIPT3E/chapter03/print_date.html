@@ -5,7 +5,14 @@
 <title>Using Functions</title>
 <link href="../_css/site.css" rel="stylesheet">
 <script>
-
+function printToday() {
+  var today = new Date();
+  var todaystr = new String(today);
+  document.write("var <b>today</b> = new Date() => <b>" +  today + "</b><br>");
+  document.write("<b>today.toDateStream</b> => <b>" + today.toDateString() + "</b><br>");
+  document.write("var <b>todaystr</b> = new String(today) => <b>" + todaystr + "</b><br>");
+  return todaystr;
+}
 </script>
 </head>
 
@@ -17,7 +24,14 @@
   <div class="content">
     <div class="main">
       <h1>Using Functions</h1>
-      <p>Today is <strong> </strong></p>
+      <p>Date formats:
+        <br>
+
+          <script>
+            printToday();
+          </script>
+
+      </p>
     </div>
   </div>
   <footer>
